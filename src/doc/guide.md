@@ -1215,6 +1215,8 @@ generics, let's talk about how to use them with pattern matching, a tool that wi
 let us deconstruct this sum type (the type theory term for enums) in a very elegant
 way and avoid all these messy `if`/`else`s.
 
+> Note that if you're working with your own custom enum, you need to add the `#[deriving(PartialEq)]` attribute above the  enum. (The ones listed above are for example only, they are part of the standard library and already have it).
+
 # Match
 
 Often, a simple `if`/`else` isn't enough, because you have more than two
